@@ -12,46 +12,46 @@ $(document).ready(function () {
 
         // Save text in local storage
         localStorage.setItem(time, text);
-    })})
+    })
+   
+    function timeTracker() {
+        //get current number of hours.
+        var timeNow = moment().hour();
 
-// // Delegate clicking on a task
-// $(".description").on("click", "div", function() {
-//     var text = $(this)
-//         .text()
-//         .trim();
+        // loop over time blocks
+        $(".time-block").each(function () {
+            var blockTime = parseInt($(this).attr("id").split("hour")[1]);
 
-//     var textInput = $("<textarea>")
-//         .val(text);
+            // To check the time and add the classes for background indicators
+            if (blockTime < timeNow) {
+                $(this).removeClass("future");
+                $(this).removeClass("present");
+                $(this).addClass("past");
+            }
+            else if (blockTime === timeNow) {
+                $(this).removeClass("past");
+                $(this).removeClass("future");
+                $(this).addClass("present");
+            }
+            else {
+                $(this).removeClass("present");
+                $(this).removeClass("past");
+                $(this).addClass("future");
 
-//     $(this).replaceWith(textInput);
+            }
+        })
+    }
+    // Get item from local storage if any
+    $("#hour-9 .description").val(localStorage.getItem("hour-9"));
+    $("#hour-10 .description").val(localStorage.getItem("hour-10"));
+    $("#hour-11 .description").val(localStorage.getItem("hour-11"));
+    $("#hour-12 .description").val(localStorage.getItem("hour-12"));
+    $("#hour-1 .description").val(localStorage.getItem("hour-1"));
+    $("#hour-2 .description").val(localStorage.getItem("hour-2"));
+    $("#hour-3 .description").val(localStorage.getItem("hour-3"));
+    $("#hour-4 .description").val(localStorage.getItem("hour-4"));
+    $("#hour-5 .description").val(localStorage.getItem("hour-5"));
 
-//     textInput.trigger("focus");
-// });
 
-// $(".description").on("blur", "textarea", function() {
-//     var taskP = $("<p>")
-//         .text(text);
-
-//     $(this).replaceWith(taskP);
-// });
-
-// var checkTime = function () {
-//     var hour = $(".hour").text().trim();
-
-//     var time = moment(hour, "LT");
-//     console.log(time)
-
-//     //remove any old classes from element
-//     $(".hour").removeClass(".present .past .future");
-
-//     // apply new class if task is near/over due date
-//     if (moment().isAfter(time)) {
-//         $(".hour").addClass(".past");
-//     } else if (moment().isBefore(time)) {
-//         $(".hour").addClass(".future");
-//     } else {
-//         $(".hour").addClass(".present");
-//     }
-// }
-
-// checkTime();
+    timeTracker();
+})
