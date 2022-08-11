@@ -1,9 +1,18 @@
 // Display current date and time
-const m = moment();
+const currentTime = moment();
 
-$("p.time-display").html(m.format("[Today's date is: ] dddd MMMM Do, YYYY h:mm a"));
+$("p.time-display").html(currentTime.format("[Today's date is: ] dddd MMMM Do, YYYY h:mm a"));
 
+$(document).ready(function () {
+    // saveBtn click listener 
+    $(".saveBtn").on("click", function () {
+        // Get nearby values of the description in JQuery
+        var text = $(this).siblings(".description").val();
+        var time = $(this).parent().attr("id");
 
+        // Save text in local storage
+        localStorage.setItem(time, text);
+    })})
 
 // // Delegate clicking on a task
 // $(".description").on("click", "div", function() {
