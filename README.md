@@ -20,4 +20,4 @@ https://calebfunderburk.github.io/Date-Master/
 
 ## Screenshot
 
-![Screenshot of my project](assets/screenshot.png)
+![Screenshot of my project](assets/images/screenshot.png)
