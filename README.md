@@ -2,7 +2,7 @@
 
 ## Website
 
-
+https://calebfunderburk.github.io/Date-Master/
 
 ## Built With
 
@@ -19,3 +19,5 @@
 
 
 ## Screenshot
+
+![Screenshot of my project](assets/screenshot.png)
