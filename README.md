@@ -1,23 +1,38 @@
 # Date Master
 
-## Website
+## About this App
 
-https://calebfunderburk.github.io/Date-Master/
+### Description
 
-## Built With
+Date Master is a daily planner application that allows users to keep track of different tasks that they need to complete throughout the day.
+
+### User Story
+
+As a user looking for a way to keep track of differnet things I need to accomplish, I would like an application that allows me to keep track of my daily tasks. When I am on the homepage, I am presented with an empty time sheet that I can add and remove tasks from.
+
+### Features
+
+* The appplication uses MomentJS to track the current time of day.
+* Tasks change color based on the time of day, to let users know what tasks should be completed or started soon.
+
+### Built With
 
 - HTML
 - CSS
-    - Bootstrap
+- Bootstrap
 - JavaScript
-    - JQuery
-    - MomentJS
+- JQuery
+- MomentJS
 
-## Project Narrative
+## Deployed Application
 
-### About
+<a href="https://calebfunderburk.github.io/Date-Master/" target="_blank">Click here</a> to view this application.
 
-In this project, I was tasked with updating the current code I was given to make an app that allows users to add and save tasks they need to accomplish throughout the day. The tasks also needed to have a function where they change colors based on the time of day, to let users know what tasks should be completed or started soon. Most of what I did in this project required me to use JQuery for DOM maniplutaion, and MomentJS to track the current time of day. 
+## Installation
+
+This program can be run through a browser using the above link to the deployed application. In order to run this program locally you will need to:
+
+* Clone this repository to receive all the files.
 
 ## Screenshot
 
